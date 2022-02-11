@@ -62,8 +62,16 @@ def load_grossers(catalog):
     Returns:
         [int]: the size ot the loaded structure
     """
-    # TODO para completar
-    pass
+    mf = "Movies"
+    gf = "HighestGrossers.csv"
+    grossers_lt = catalog["grossers"]
+    grossers_file = os.path.join(cf.data_dir, mf, gf)
+    wfile = open(grossers_file, encoding="utf-8")
+    input_file = csv.DictReader(wfile)
+    for gr in input_file:
+        lt.addLast(grossers_lt, gr)
+    ans = grossers_size(catalog)
+    return ans
 
 
 def compare_years(y1, y2):
