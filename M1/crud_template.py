@@ -50,9 +50,7 @@ def load_data(catalog):
     Returns:
         [list]: list with the size ot the laded structure
     """
-    # TODO para completar
     pass
-
 
 def load_grossers(catalog):
     """
@@ -79,8 +77,11 @@ def compare_years(y1, y2):
     Returns:
         [int]: -1 if is lesser, 0 if is equal and 1 if is greater
     """
-    # TODO para completar
-    pass
+    if y1 < int(y2["YEAR"]):
+        return -1
+    if y1 == int(y2["YEAR"]):
+        return 0
+    return 1
 
 
 def grossers_size(catalog):
