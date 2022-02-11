@@ -77,11 +77,16 @@ def compare_years(y1, y2):
     Returns:
         [int]: -1 if is lesser, 0 if is equal and 1 if is greater
     """
-    if y1 < int(y2["YEAR"]):
-        return -1
-    if y1 == int(y2["YEAR"]):
-        return 0
-    return 1
+    try:
+        if y1 < int(y2["YEAR"]):
+            return -1
+        elif y1 == int(y2["YEAR"]):
+            return 0
+        elif y1 > int(y2["YEAR"]):
+            return 1
+
+    except Exception as e:
+        raise e
 
 
 def grossers_size(catalog):
