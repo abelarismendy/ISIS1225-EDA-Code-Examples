@@ -50,7 +50,9 @@ def load_data(catalog):
     Returns:
         [list]: list with the size ot the laded structure
     """
-    pass
+    grossers = load_grossers(catalog)
+    ans = (grossers,)
+    return ans
 
 def load_grossers(catalog):
     """
