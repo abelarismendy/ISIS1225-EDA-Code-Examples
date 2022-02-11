@@ -135,8 +135,8 @@ dmypy.json
 
 #Python Cache
 #Data
-*.csv
-!Data/GoodReads/books.csv
-!Data/GoodReads/book_reviews.csv
+#*.csv
+#!Data/GoodReads/books.csv
+#!Data/GoodReads/book_reviews.csv
 
 .vim
